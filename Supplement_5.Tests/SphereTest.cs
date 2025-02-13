@@ -45,30 +45,4 @@ namespace Supplement_5.Tests
             Sphere sphere = new Sphere(0); // invalid radius
         }
     }
-
-    internal class Sphere
-    {
-        private int v;
-        private double radius;
-
-        public Sphere(int v)
-        {
-            this.v = v;
-        }
-
-        public Sphere(double radius)
-        {
-            this.radius = radius;
-        }
-
-        internal double GetSurfaceArea()
-        {
-            throw new NotImplementedException();
-        }
-
-        internal double GetVolume()
-        {
-            throw new NotImplementedException();
-        }
-    }
 }

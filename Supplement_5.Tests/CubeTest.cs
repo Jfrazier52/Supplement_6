@@ -1,8 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using Supplement_5; // Namespace of your shape classes
-
 namespace Supplement_5.Tests
+
 {
     [TestClass]
     public class CubeTests
@@ -17,7 +15,7 @@ namespace Supplement_5.Tests
             double volume = cube.GetVolume();
 
             
-            Assert.AreEqual(expectedVolume, volume, 0.001);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(expectedVolume, volume, 0.001);
         }
 
         [TestMethod]
@@ -29,7 +27,7 @@ namespace Supplement_5.Tests
 
             double surfaceArea = cube.GetSurfaceArea();
 
-            Assert.AreEqual(expectedSurfaceArea, surfaceArea, 0.001);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(expectedSurfaceArea, surfaceArea, 0.001);
         }
 
         [TestMethod]

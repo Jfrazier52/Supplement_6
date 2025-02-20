@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
-using LinqAssignmentApp;  // Use your app's namespace
+using LinqAssignment;  
 
 namespace LinqAssignment.Tests
 {
@@ -10,13 +10,10 @@ namespace LinqAssignment.Tests
         [TestMethod]
         public void TestGetEvenNumbers_NoSkip()
         {
-            // Arrange: Create an array of 1,000,000 integers.
             var array = Enumerable.Range(0, 1_000_000).ToArray();
 
-            // Act: Call the function to get even numbers with no skip.
             var evenNumbers = ArrayFunctions.GetEvenNumbers(array).ToList();
 
-            // Assert: Verify that all numbers are even and the count is correct.
             Assert.IsTrue(evenNumbers.All(n => n % 2 == 0));
             Assert.AreEqual(500_000, evenNumbers.Count);
         }
@@ -32,7 +29,6 @@ namespace LinqAssignment.Tests
             Assert.AreEqual(500_000 - skip, evenNumbers.Count);
         }
 
-        // Tests for the odd numbers function...
         [TestMethod]
         public void TestGetOddNumbersAfterShuffle_NoSkip()
         {
@@ -53,7 +49,6 @@ namespace LinqAssignment.Tests
             Assert.AreEqual(500_000 - skip, oddNumbers.Count);
         }
 
-        // Test for the statistics function...
         [TestMethod]
         public void TestGetArrayStats()
         {
